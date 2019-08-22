@@ -44,3 +44,25 @@ app.get('/home',(req,res)=>{
      res.sendFile(__dirname+"/home.html")  
 })
 app.listen(3000);
+
+
+/*  --> first we need to run git init command. It will create .git folder.
+     -> after if we check git status then it will shows  
+          nothing added to commit but untracked files present.
+     -> we need to tell git to which files need to be tracked. For that we need to run
+        command git add filename.
+     -> After that we check the tracked files using git status. 
+     -> we need to create .gitignore file and inside that file we need to mention 
+        which files not required to be tracked.          
+     -> After that we need to commit that files to local repository.
+          git commit -m 'message'
+     ->     
+
+*/
+/*  -> Git is not Github. Git is the version control software, and Github is a git repository 
+       hosting service which offers all the source code management provided in git. 
+       Github is where you upload your git repository.
+    -> The Local Repository is everything in your .git directory.
+       Mainly what you will see in your Local Repository are all of your checkpoints or commits.
+       It is the area that saves everything (so don’t delete it). That’s it.
+*/
