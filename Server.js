@@ -2,7 +2,8 @@ const express=require('express');
 const app=express();
 const fs=require('fs');
 
-
+const port= process.env.PORT  || 3000;
+console.log(port);
 //app.use() method is used to set middleware.
 //__dirname contains absoult path of our current project.
 console.log("path is "+__dirname);
@@ -43,7 +44,9 @@ app.get('/',(req,res)=>{
 app.get('/home',(req,res)=>{
      res.sendFile(__dirname+"/home.html")  
 })
-app.listen(3000);
+app.listen(port,()=>{
+   console.log(`server is running in port ${port}`)
+});
 
 
 /*  --> first we need to run git init command. It will create .git folder.
